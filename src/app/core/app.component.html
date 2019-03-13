@@ -1,2 +1,39 @@
-<button type="button" class="btn btn-primary">Primary</button>
-<router-outlet></router-outlet>
+<div class="site">
+  <div class="site-content">
+    <div class="container">
+      <nav class="navbar navbar-expand navbar-dark">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active"><i
+               class="d-none d-sm-inline-block fas fa-home mx-1"></i>Home</a>
+          <a class="nav-item nav-link" [routerLink]="['/portfolio']" routerLinkActive="active"><i
+               class="d-none d-sm-inline-block fas fa-images mx-1"></i>Portfolio</a>
+          <a class="nav-item nav-link" [routerLink]="['/contact']" routerLinkActive="active"><i
+               class="d-none d-sm-inline-block fas fa-envelope mx-1"></i>Contact</a>
+        </div>
+      </nav>
+    </div>
+    <div class="header">
+      <div class="container">
+        <h1>Fares Stita</h1>
+        <h2>Developer</h2>
+      </div>
+    </div>
+    <main class="main-content container">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <footer class="footer container">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <p>Copyright © 2019 Fares Stita</p>
+      </div>
+      <div class="col-12 col-sm-6">
+        <ul class="social-icons float-right mt-3">
+          <li><a class="fab fa-facebook"></a></li>
+          <li><a class="fab fa-twitter"></a></li>
+          <li><a class="fas fa-envelope-open-text"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
