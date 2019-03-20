@@ -50,6 +50,15 @@ body {
     }
 }
 
+.portfolio-preview {
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    img {
+        border: 2px solid $body-color;
+    }
+}
+
 .footer {
     position: relative;
     bottom: 1.25rem;
