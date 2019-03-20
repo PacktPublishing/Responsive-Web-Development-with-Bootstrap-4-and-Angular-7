@@ -14,7 +14,7 @@ body {
 }
 
 .main-content {
-  margin-top: -40px
+    margin-top: -40px
 }
 
 .header {
@@ -43,6 +43,13 @@ body {
     }
 }
 
+.row {
+    .skill-block {
+        padding: 2.5rem 1.25rem;
+        margin-bottom: 1rem;
+    }
+}
+
 .footer {
     position: relative;
     bottom: 1.25rem;
@@ -65,5 +72,13 @@ body {
                 }
             }
         }
+    }
+}
+
+.mat-card {
+    color: $body-color;
+    background-color: $alt-bg;
+    .mat-card-header-text {
+        margin: 0rem 0.5rem !important;
     }
 }
