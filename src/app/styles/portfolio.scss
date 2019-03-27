@@ -30,13 +30,16 @@ body {
     background: $alt-bg;
     border-bottom: 3px solid $accent;
     top: 1.5rem;
+
     .navbar-nav .nav-link {
         color: $alt-color;
         padding: 1rem 0.5rem;
         transition: color 0.2s ease-in;
+
         &.active {
             color: $accent;
         }
+
         &:hover:not(.active) {
             color: rgba($alt-color, 0.75);
         }
@@ -54,6 +57,7 @@ body {
     text-align: center;
     padding-top: 5rem;
     padding-bottom: 4rem;
+
     img {
         border: 2px solid $body-color;
     }
@@ -65,17 +69,21 @@ body {
     color: $alt-color;
     border-top: 3px solid $accent;
     background-color: $alt-bg;
+
     p {
         padding-top: 1.25rem;
     }
+
     .social-icons {
         li {
             display: inline-block;
             list-style: none;
+
             a {
                 padding: 0.75rem 1rem;
                 text-align: center;
                 transition: color 0.2s ease-in;
+
                 &:hover {
                     color: $accent;
                 }
@@ -87,7 +95,14 @@ body {
 .mat-card {
     color: $body-color;
     background-color: $alt-bg;
+
     .mat-card-header-text {
-        margin: 0rem 0.5rem !important;
+        margin: 0rem 0.5rem;
+    }
+}
+
+.filter-card {
+    .mat-card-header-text {
+        margin: 0rem;
     }
 }

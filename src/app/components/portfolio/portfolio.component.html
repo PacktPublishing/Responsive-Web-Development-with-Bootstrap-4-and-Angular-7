@@ -1,3 +1,19 @@
-<p>
-  portfolio works!
-</p>
+<mat-card class="filter-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h4>Filter</h4>
+    </mat-card-title>
+  </mat-card-header>
+  <label class="mr-1 font-weight-bold">Type:</label>
+  <mat-radio-group [(ngModel)]="selectedType">
+    <mat-radio-button class="mx-2" value="all">All</mat-radio-button>
+    <mat-radio-button class="mx-2" value="Angular">Angular</mat-radio-button>
+    <mat-radio-button class="mx-2" value="React">React</mat-radio-button>
+    <mat-radio-button class="mx-2" value="Vue">Vue</mat-radio-button>
+  </mat-radio-group>
+  <div>
+    {{selectedType}}
+  </div>
+</mat-card>
+<mat-divider class="my-3"></mat-divider>
+<div></div>
