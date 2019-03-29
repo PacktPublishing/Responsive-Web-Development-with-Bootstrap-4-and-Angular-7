@@ -7,13 +7,8 @@
   <label class="mr-1 font-weight-bold">Type:</label>
   <mat-radio-group [(ngModel)]="selectedType">
     <mat-radio-button class="mx-2" value="all">All</mat-radio-button>
-    <mat-radio-button class="mx-2" value="Angular">Angular</mat-radio-button>
-    <mat-radio-button class="mx-2" value="React">React</mat-radio-button>
-    <mat-radio-button class="mx-2" value="Vue">Vue</mat-radio-button>
+    <mat-radio-button *ngFor="let type of types" class="mx-2" [value]="type">{{type}}</mat-radio-button>
   </mat-radio-group>
-  <div>
-    {{selectedType}}
-  </div>
 </mat-card>
 <mat-divider class="my-3"></mat-divider>
 <div class="row mb-5">
