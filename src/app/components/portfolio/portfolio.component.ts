@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
 import { Portfolio } from '../../services/portfolio.model';
 import { trigger, transition, animate, style, stagger, animateChild, query } from '@angular/animations';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -41,9 +42,14 @@ export class PortfolioComponent implements OnInit {
   rooms = ['Room 1', 'Living Room', 'Kitchen', 'Bathroom'];
 
   portfolios: Portfolio[];
-  constructor(private portfolioSvc: PortfolioService) { }
+  constructor(private portfolioSvc: PortfolioService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    const filter = this.route.snapshot.queryParamMap.get('filter');
+    if (filter) {
+      this._selectedType = filter;
+    }
+
     this.loadPortfolios(this._selectedType);
   }
 
