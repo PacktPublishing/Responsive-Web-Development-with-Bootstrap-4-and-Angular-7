@@ -11,6 +11,8 @@ export class PortfolioComponent implements OnInit {
 
   selectedType: 'all' | 'Angular' | 'React' | 'Vue' = 'all';
 
+  rooms = ['Room 1', 'Living Room', 'Kitchen', 'Bathroom'];
+
   portfolios: Portfolio[];
   constructor(private portfolioSvc: PortfolioService) { }
 

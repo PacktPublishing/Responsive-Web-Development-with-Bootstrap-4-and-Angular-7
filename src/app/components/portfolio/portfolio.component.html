@@ -16,6 +16,27 @@
   </div>
 </mat-card>
 <mat-divider class="my-3"></mat-divider>
-<div>
-  {{portfolios | json}}
+<div class="row mb-5">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let item of portfolios">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar>
+          <ng-container [ngSwitch]="item.type">
+            <i class="fab fa-angular fa-2x angular-color" *ngSwitchCase="'Angular'"></i>
+            <i class="fab fa-react fa-2x react-color" *ngSwitchCase="'React'"></i>
+            <i class="fab fa-vuejs fa-2x vue-color" *ngSwitchCase="'Vue'"></i>
+            <i class="fas fa-question fa-2x" *ngSwitchDefault></i>
+          </ng-container>
+        </div>
+        <mat-card-title>{{item.name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="item.preview + '?text=' + item.name" [alt]="item.name">
+      <mat-card-content>
+        {{item.description}}
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Visit</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
