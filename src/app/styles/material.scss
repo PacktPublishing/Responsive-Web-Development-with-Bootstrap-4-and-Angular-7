@@ -3,10 +3,10 @@
 
 @include mat-core();
 
-$my-portfolio-website-primary: mat-palette($mat-teal);
-$my-portfolio-website-accent: mat-palette($mat-blue);
+$my-portfolio-website-primary: mat-palette($mat-blue);
+$my-portfolio-website-accent: mat-palette($mat-teal);
 $my-portfolio-website-warn: mat-palette($mat-red);
 
-$my-portfolio-website-theme: mat-dark-theme($my-portfolio-website-primary, $my-portfolio-website-accent, $my-portfolio-website-warn);
+$my-portfolio-website-theme: mat-light-theme($my-portfolio-website-primary, $my-portfolio-website-accent, $my-portfolio-website-warn);
 
 @include angular-material-theme($my-portfolio-website-theme);
